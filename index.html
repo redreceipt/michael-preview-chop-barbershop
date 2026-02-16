@@ -52,19 +52,19 @@
       padding:10px 0 18px;
     }
     .brand{display:flex; align-items:center; gap:12px; text-decoration:none}
-    /* Make the logo feel like the brand mark (not an icon). */
+    /* Make the logo actually readable: use a trimmed asset and scale it up. */
     .brand img{
-      height:56px;
+      height:72px;
       width:auto;
-      max-width:190px;
+      max-width:240px;
       object-fit:contain;
-      border-radius:14px;
-      background:rgba(255,255,255,.04);
-      border:1px solid rgba(255,255,255,.10);
-      padding:10px 12px;
+      background:transparent;
+      border:none;
+      padding:0;
+      filter: drop-shadow(0 10px 24px rgba(0,0,0,.35));
     }
     @media (max-width: 900px){
-      .brand img{height:48px; max-width:170px; padding:8px 10px}
+      .brand img{height:56px; max-width:210px}
     }
     .brand .t{line-height:1}
     .brand .name{font-family:"Bebas Neue", system-ui; letter-spacing:.06em; font-size:22px}
@@ -289,7 +289,7 @@
   <div class="wrap">
     <div class="topbar">
       <a class="brand" href="#top">
-        <img src="assets/chop-logo.png" alt="Chop Barbershop logo">
+        <img src="assets/chop-logo-trim.png" alt="Chop Barbershop logo">
         <div class="t">
           <div class="name">CHOP BARBERSHOP</div>
           <div class="loc">Simpsonville, South Carolina</div>
