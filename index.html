@@ -52,7 +52,20 @@
       padding:10px 0 18px;
     }
     .brand{display:flex; align-items:center; gap:12px; text-decoration:none}
-    .brand img{width:42px; height:42px; border-radius:12px; background:rgba(255,255,255,.04); padding:6px}
+    /* Make the logo feel like the brand mark (not an icon). */
+    .brand img{
+      height:56px;
+      width:auto;
+      max-width:190px;
+      object-fit:contain;
+      border-radius:14px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.10);
+      padding:10px 12px;
+    }
+    @media (max-width: 900px){
+      .brand img{height:48px; max-width:170px; padding:8px 10px}
+    }
     .brand .t{line-height:1}
     .brand .name{font-family:"Bebas Neue", system-ui; letter-spacing:.06em; font-size:22px}
     .brand .loc{font-size:13px; color:var(--muted)}
